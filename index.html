@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Full-Stack & Mobile Developer</title>
+    <meta name="description"
+        content="Full-Stack & Mobile Developer specializing in TypeScript, React, Next.js, Flutter, GraphQL, and more. View my projects and get in touch.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Dev<span class="logo-dot">.</span>Portfolio<span
+                    class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Нүүр</a></li>
+                <li><a href="#about" class="nav-link">Миний тухай</a></li>
+                <li><a href="#skills" class="nav-link">Ур чадвар</a></li>
+                <li><a href="#projects" class="nav-link">Төслүүд</a></li>
+                <li><a href="#contact" class="nav-link">Холбоо барих</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <!-- <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Ажил хүлээн авч байна
+            </div> -->
+            <h1 class="hero-title">
+                <span class="hero-greeting">Сайн байна уу, би</span>
+                <span class="hero-name" id="typed-name"></span>
+                <span class="cursor-blink">|</span>
+            </h1>
+            <p class="hero-subtitle">Full-Stack & Mobile Developer</p>
+            <p class="hero-description">
+                TypeScript, React, Next.js, Flutter зэрэг орчин үеийн технологиудыг ашиглан
+                бүтээлч шийдлүүдийг хэрэгжүүлдэг.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>Төслүүд үзэх</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn btn-outline">Холбоо барих</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="2">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Жилийн туршлага</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="20">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Дууссан төслүүд</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Технологи</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="code-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="code-title">developer.ts</span>
+                </div>
+                <pre class="code-body"><code><span class="code-keyword">interface</span> <span class="code-type">Developer</span> {
+  <span class="code-prop">name</span>: <span class="code-string">"Your Name"</span>;
+  <span class="code-prop">role</span>: <span class="code-string">"Full-Stack Developer"</span>;
+  <span class="code-prop">skills</span>: <span class="code-type">string</span>[];
+  <span class="code-prop">passion</span>: <span class="code-string">"Building Cool Stuff"</span>;
+}
+
+<span class="code-keyword">const</span> <span class="code-var">me</span>: <span class="code-type">Developer</span> = {
+  <span class="code-prop">name</span>: <span class="code-string">"Your Name"</span>,
+  <span class="code-prop">role</span>: <span class="code-string">"Full-Stack Developer"</span>,
+  <span class="code-prop">skills</span>: [
+    <span class="code-string">"TypeScript"</span>,
+    <span class="code-string">"React"</span>,
+    <span class="code-string">"Flutter"</span>,
+    <span class="code-string">"GraphQL"</span>,
+  ],
+  <span class="code-prop">passion</span>: <span class="code-string">"Building Cool Stuff"</span>,
+};</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Миний тухай</span>
+                <h2 class="section-title">Хөгжүүлэгч<span class="accent">.</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Би Web болон Mobile програм хөгжүүлэгч бөгөөд орчин үеийн вэб
+                        болон мобайл
+                        технологиудыг ашиглан хэрэглэгчдэд ээлтэй, гүйцэтгэл сайтай бүтээгдэхүүн бүтээхэд
+                        эрмэрзэж байгаа.
+                    </p>
+                    <p>
+                        React, Next.js, Remix зэрэг frontend framework-ууд, Flutter-ээр мобайл апп,
+                        GraphQL-ээр API хөгжүүлэлт хийх туршлагатай. Код бичих дуртайгаас гадна
+                        багаар ажиллах, шинэ технологи судлахад сонирхолтой.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🚀</div>
+                            <div>
+                                <h4>Хурдан & Оновчтой</h4>
+                                <p>Хэрэглэгчийн туршлагад анхаарал хандуулсан шийдэл</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🎨</div>
+                            <div>
+                                <h4>Бүтээлч Дизайн</h4>
+                                <p>Орчин үеийн, Хэрэглэгчийн туршлагад нийцсэн интерфейс</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📱</div>
+                            <div>
+                                <h4>Cross-Platform</h4>
+                                <p>Вэб болон мобайл дээр ажиллах шийдэл</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        <div class="about-avatar" id="about-avatar">
+                            <div class="avatar-placeholder">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="about-floating-badge badge-1">TypeScript</div>
+                        <div class="about-floating-badge badge-2">Flutter</div>
+                        <div class="about-floating-badge badge-3">React</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Ур чадвар</span>
+                <h2 class="section-title">Технологийн стек<span class="accent">.</span></h2>
+            </div>
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon react-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <circle cx="12" cy="12" r="2.5" fill="currentColor" />
+                                    <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor"
+                                        stroke-width="1" />
+                                    <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor"
+                                        stroke-width="1" transform="rotate(60 12 12)" />
+                                    <ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="currentColor"
+                                        stroke-width="1" transform="rotate(120 12 12)" />
+                                </svg>
+                            </div>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon nextjs-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.5 15V9l7 8"
+                                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span>Next.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon remix-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path
+                                        d="M19.5 17.5c0 2-1 3.5-3.5 3.5H5v-3h8c1.5 0 2.5-.8 2.5-2s-1-2-2.5-2H5V3h11c2.5 0 4 1.5 4 3.5 0 1.5-1 2.8-2.5 3.3 1.8.5 2.5 2 2.5 3.7z"
+                                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span>Remix</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon tailwind-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path
+                                        d="M12 6c-2.667 0-4.333 1.333-5 4 1-1.333 2.167-1.833 3.5-1.5.762.19 1.307.738 1.91 1.345C13.314 10.757 14.389 11.844 17 12c-2.667 0-4.333 1.333-5 4 1-1.333 2.167-1.833 3.5-1.5.762.19 1.307.738 1.91 1.345.904.916 1.979 2.003 4.59 2.155"
+                                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Language -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon ts-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" /><text x="12" y="16" text-anchor="middle"
+                                        fill="currentColor" font-size="10" font-weight="bold"
+                                        font-family="monospace">TS</text>
+                                </svg>
+                            </div>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon dart-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path d="M7 3L4 6v12l3 3h10l3-3V6l-3-3H7z" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linejoin="round" />
+                                    <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <span>Dart</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3>Mobile</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon flutter-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path
+                                        d="M14.5 2L3 13.5l3.5 3.5L20 3.5V2h-5.5zM14.5 12L8 18.5 11.5 22H17l-3.5-3.5L17 15h3L14.5 12z"
+                                        fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend / API -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <h3>Backend / API</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon graphql-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <polygon points="12,2 22,7.5 22,16.5 12,22 2,16.5 2,7.5" fill="none"
+                                        stroke="currentColor" stroke-width="1.2" />
+                                    <circle cx="12" cy="2" r="1.5" fill="currentColor" />
+                                    <circle cx="22" cy="7.5" r="1.5" fill="currentColor" />
+                                    <circle cx="22" cy="16.5" r="1.5" fill="currentColor" />
+                                    <circle cx="12" cy="22" r="1.5" fill="currentColor" />
+                                    <circle cx="2" cy="16.5" r="1.5" fill="currentColor" />
+                                    <circle cx="2" cy="7.5" r="1.5" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <span>GraphQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Version Control -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-category-header">
+                        <div class="skill-category-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="18" cy="18" r="3"></circle>
+                                <circle cx="6" cy="6" r="3"></circle>
+                                <path d="M6 21V9a9 9 0 0 0 9 9"></path>
+                            </svg>
+                        </div>
+                        <h3>Version Control</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-icon github-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon gitlab-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28">
+                                    <path
+                                        d="M12 21.35L2.59 14.27l1.77-5.44 1.54-4.73h3.14L12 9.23l2.96-5.13h3.14l1.54 4.73 1.77 5.44z"
+                                        fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <span>GitLab</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Төслүүд</span>
+                <h2 class="section-title">Сүүлийн ажлууд<span class="accent">.</span></h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title"> nomin.mn</h3>
+                        <p class="project-desc">TypeScript болон GraphQL ашиглан бүтээсэн онлайн худалдааны платформ.
+                            Stripe төлбөрийн систем, бүтээгдэхүүний менежмент.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">GraphQL</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="View code on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Code
+                            </a>
+                            <a href="#" class="project-link" aria-label="View live demo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">nomin App</h3>
+                        <p class="project-desc">Flutter ашиглан iOS болон Android дээр ажилладаг онлайн e-commerce апп.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="View code on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Code
+                            </a>
+                            <a href="#" class="project-link" aria-label="View live demo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-commerce web app</h3>
+                        <p class="project-desc">энэ төсөл нь онлайн шоф хэлбэрээр хөгжүүлэгдсэн вэб апп юм production
+                            дээр хараахаан гараагүй бөгөөд vercel дээр deployment хийгдсэн </p>
+                        <div class="project-tags">
+                            <span class="tag">flutter</span>
+                            <span class="tag">Dart</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="View code on GitLab">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Code
+                            </a>
+                            <a href="#" class="project-link" aria-label="View live demo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Blog Platform</h3>
+                        <p class="project-desc">Next.js SSG болон GraphQL CMS ашигласан блог платформ. MDX дэмжлэг, SEO
+                            оновчтой, хурдан ачаалал.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">GraphQL</span>
+                            <span class="tag">MDX</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" aria-label="View code on GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Code
+                            </a>
+                            <a href="#" class="project-link" aria-label="View live demo">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Live
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// Холбоо барих</span>
+                <h2 class="section-title">Хамтран ажиллая<span class="accent">.</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-methods">
+                        <a href="mailto:hello@example.com" class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="method-label">Имэйл</span>
+                                <span class="method-value">erkaa.erdenedalai@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
+                                        fill="currentColor" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="method-label">GitHub</span>
+                                <span class="method-value">github.com/eerk123</span>
+                            </div>
+                        </a>
+                        <a href="https://gitlab.com" target="_blank" class="contact-method">
+                            <div class="contact-method-icon">
+                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="M12 21.35L2.59 14.27l1.77-5.44 1.54-4.73h3.14L12 9.23l2.96-5.13h3.14l1.54 4.73 1.77 5.44z"
+                                        fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="method-label">GitLab</span>
+                                <span class="method-value">gitlab.com/eerk123</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Нэр</label>
+                        <input type="text" id="name" name="name" placeholder="Таны нэр" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Имэйл</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Мессеж</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Таны мессеж..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Илгээх</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Dev<span class="logo-dot">.</span>Portfolio<span
+                        class="logo-bracket">/&gt;</span>
+                </a>
+                <div class="footer-socials">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-link">
+                        <svg viewBox="0 0 24 24" width="22" height="22">
+                            <path
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="https://gitlab.com" target="_blank" aria-label="GitLab" class="social-link">
+                        <svg viewBox="0 0 24 24" width="22" height="22">
+                            <path
+                                d="M12 21.35L2.59 14.27l1.77-5.44 1.54-4.73h3.14L12 9.23l2.96-5.13h3.14l1.54 4.73 1.77 5.44z"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+                <p class="footer-copyright">&copy; 2026 All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
